@@ -1,0 +1,50 @@
+<div>
+    <div class="container-fluid">
+        <h2>{{data.header1}}</h2>
+        <hr />
+        <h3>{{data.header2}}</h3>
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="projectView">View Project:</label>
+                <select class="form-control" name="projectView" id="projectView" ng-change="switchProject()" ng-model="data.selectedProject">
+                    <option value="0">1</option>
+                    <option value="1">2</option>
+                    <option value="2">3</option>
+                </select><br />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="well">
+                    <div class="form-group">
+                        <form role="form">
+                            <label for="projectName">Project Name:</label>
+                            <input type="text" class="form-control" name="projectName" id="projectName" placeholder="Project Name" ng-model="data.project.name"><br />
+                            <label for="projectType" >Project Type:</label>
+                            <select class="form-control" name="projectType" id="projectType" ng-model="data.project.type">
+                                <option value="Blue">Blue</option>
+                                <option value="Green">Green</option>
+                                <option value="Red">Red</option>
+                            </select><br />
+                            <label for="projectStatus">Project Status:</label>
+                            <select class="form-control" name="projectStatus" id="projectStatus" ng-model="data.project.status">
+                                <option value="Ongoing">Ongoing</option>
+                                <option value="Pending">Pending</option>
+                                <option value="Complete">Complete</option>
+                            </select><br />
+                            <input type="button" class="btn btn-success" value="Save" ng-click="createProject()" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="well">
+                    <h3>Data Bindings</h3>
+                    <p>Project Name: {{data.project.name}}</p>
+                    <p>Project Type: {{data.project.type}}</p>
+                    <p>Project Status: {{data.project.status}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

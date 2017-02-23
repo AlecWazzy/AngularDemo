@@ -1,0 +1,15 @@
+<div>
+    <h2>This is page 1!</h2>
+    <hr />
+    <h3>Simple Service Demonstration</h3>
+    <form>
+        <label for="value1">First Value:</label>
+        <input type="text" name="value1" id="value1" placeholder="First Value" ng-model="value1" /><br />
+        <label for="value2">Second Value:</label>
+        <input type="text" name="value2" id="value2" placeholder="Second Value" ng-model="value2" /><br />
+	    <input type="button" value="Add" ng-click="add()" />
+	    <input type="button" value="Subtract" ng-click="subtract()" />
+	    <input type="button" value="Concatenate" ng-click="concat()" />
+    </form>
+    <h3>Result: {{result}}</h3>
+</div>
